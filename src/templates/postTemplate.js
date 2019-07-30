@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 
 export const Template = ({ data }) => {
@@ -7,6 +7,7 @@ export const Template = ({ data }) => {
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
+      <Link to={"/"}>Home</Link>
       <section className="blog-post">
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.date}</h2>
