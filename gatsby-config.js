@@ -6,8 +6,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
+    {
+      resolve: "gatsby-plugin-ts-loader",
+      options: {
+        tslint: true, // false or exclude to disable tslint
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
