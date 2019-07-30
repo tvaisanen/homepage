@@ -12,7 +12,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-// <Image />
-// <Link to="/page-2/">Go to page 2</Link>
-
 export default IndexPage
