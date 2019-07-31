@@ -9,10 +9,8 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <h1>t.vaisanen</h1>
+    <p>Hi, there.</p>
   </Layout>
 )
-
-// <Image />
-// <Link to="/page-2/">Go to page 2</Link>
 
 export default IndexPage

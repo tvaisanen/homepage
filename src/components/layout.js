@@ -7,10 +7,51 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
+
+import "typeface-ibm-plex-sans"
 
 import Header from "./header"
 import "./layout.css"
+import styled from "styled-components"
+
+const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 1rem 2rem;
+
+  p {
+    padding-bottom: 1rem;
+  }
+`
+
+const Nav = styled.nav`
+  list-style: none;
+  display: flex;
+  width: 100vw;
+
+  padding: 16px 0;
+
+  li {
+    margin: 0 1rem;
+  }
+
+  background: rgba(22, 22, 22, 1);
+
+  a {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+  }
+`
+
+const Container = styled.div`
+  max-width: 100vw;
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,35 +65,17 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-          flexGrow: 1,
-        }}
-      >
-        <main
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-            flexGrow: 1,
-          }}
-        >
-          {children}
-        </main>
-        <footer></footer>
-      </div>
-    </>
+    <Container>
+      <Nav>
+        <li>
+          <Link to={"/"}>Home</Link>
+        </li>
+        <li>
+          <Link to={"/blog"}>Posts</Link>
+        </li>
+      </Nav>
+      <Main>{children}</Main>
+    </Container>
   )
 }
 
