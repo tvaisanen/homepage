@@ -10,9 +10,6 @@ const IndexPage = () => (
     <SEO title="Home" />
     <h1>t.vaisanen</h1>
     <p>Hi, there.</p>
-    <Link to={"/blog/react-lazy-loading-images"}>
-      Lazy loading images with React
-    </Link>
   </Layout>
 )
 

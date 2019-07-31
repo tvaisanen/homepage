@@ -7,7 +7,9 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
+
+import "typeface-ibm-plex-sans"
 
 import Header from "./header"
 import "./layout.css"
@@ -18,10 +20,37 @@ const Main = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-
   margin: 0;
+  padding: 1rem 2rem;
+
+  p {
+    padding-bottom: 1rem;
+  }
+`
+
+const Nav = styled.nav`
+  list-style: none;
+  display: flex;
+  width: 100vw;
+
+  padding: 16px 0;
+
+  li {
+    margin: 0 1rem;
+  }
+
+  background: rgba(22, 22, 22, 1);
+
+  a {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+  }
+`
+
+const Container = styled.div`
+  max-width: 100vw;
 `
 
 const Layout = ({ children }) => {
@@ -36,9 +65,17 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <Container>
+      <Nav>
+        <li>
+          <Link to={"/"}>Home</Link>
+        </li>
+        <li>
+          <Link to={"/blog"}>Posts</Link>
+        </li>
+      </Nav>
       <Main>{children}</Main>
-    </>
+    </Container>
   )
 }
 
