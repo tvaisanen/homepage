@@ -1,7 +1,7 @@
 ---
-path: "/blog/react-lazy-loading-images"
+path: "/blog/reactjs-snippet-lazy-load-example"
 date: "2019-07-30"
-title: "Lazy loading images using React"
+title: "ReactJS snippet: Image lazy load example"
 ---
 
 # Lazy loading images with React and Styled Components
