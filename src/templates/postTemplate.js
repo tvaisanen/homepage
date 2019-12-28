@@ -2,20 +2,21 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 
-export const Template = ({ data }) => {
+export const Template = ({ data, ...props }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+
+  console.log(props)
   return (
     <Layout>
-      <Link to={"/"}>Home</Link>
       <section className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </section>
+
+      <small>{frontmatter.date}</small>
     </Layout>
   )
 }
