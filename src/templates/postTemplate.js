@@ -6,7 +6,6 @@ export const Template = ({ data, ...props }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
-  console.log(props)
   return (
     <Layout>
       <section className="blog-post">
