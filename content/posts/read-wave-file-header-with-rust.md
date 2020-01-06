@@ -17,7 +17,7 @@ use std::io::*;
 use std::str;
 </pre>
 
-### Create a struct for the file header values WAV
+### Create a struct for the WAV file header values
 
 This struct is created based on the canonical WAVE file format described [here](http://soundfile.sapp.org/doc/WaveFormat/).
 
