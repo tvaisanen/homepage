@@ -54,11 +54,11 @@ fn read_as_little_endian(bytes: u8, values: &[u8]) -> u32 {
 }
 </pre>
 
-### Read and collect the value
+### Read and collect the values
 
 <pre class="language-rust">
 fn main() {
-    let args: Vec<String> = env::args().collect();
+    let args: Vec&lt;String&gt; = env::args().collect();
 
     match args.len() {
         2 => println!("Read WAV file headers from: {}\n", &args[1]),
