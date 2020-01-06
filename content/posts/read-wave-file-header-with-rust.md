@@ -40,7 +40,7 @@ struct WAVHeader<'a> {
 }
 </pre>
 
-### Declare helper function for reading little endiand
+### Declare helper function for reading little endian values
 
 <pre class="language-rust">
 fn read_as_little_endian(bytes: u8, values: &[u8]) -> u32 {
@@ -54,7 +54,7 @@ fn read_as_little_endian(bytes: u8, values: &[u8]) -> u32 {
 }
 </pre>
 
-### Read and collect the value.
+### Read and collect the value
 
 <pre class="language-rust">
 fn main() {
