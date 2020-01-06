@@ -20,14 +20,10 @@ const SecondPage = ({ children, ...props }) => {
       }
     }
   `)
-  console.log(props)
-  console.log(data)
 
   const {
     allMarkdownRemark: { edges },
   } = data
-
-  console.log(edges)
 
   const links = edges.map(({ node }) => {
     const {
