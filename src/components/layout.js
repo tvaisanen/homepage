@@ -22,7 +22,7 @@ const Main = styled.main`
   align-items: center;
   margin: 0;
   padding: 1rem 2rem;
-
+  overflow-x: auto;
   p {
     padding-bottom: 1rem;
   }
