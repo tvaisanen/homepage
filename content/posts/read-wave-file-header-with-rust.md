@@ -10,18 +10,18 @@ This is a short demo on how to read binary data in Rust.
 
 ### First add required imports
 
-<pre class="language-rust">
+```rust
 use std::env;
 use std::fs::File;
 use std::io::*;
 use std::str;
-</pre>
+```
 
 ### Create a struct for the WAV file header values
 
 This struct is created based on the canonical WAVE file format described [here](http://soundfile.sapp.org/doc/WaveFormat/).
 
-<pre class="language-rust">
+```rust
 #[derive(Debug)]
 struct WAVHeader<'a> {
     chunk_id: &'a str,
@@ -38,11 +38,11 @@ struct WAVHeader<'a> {
     subchunk2_id: &'a str,
     subchunk2_size: u32,
 }
-</pre>
+```
 
 ### Declare helper function for reading little endian values
 
-<pre class="language-rust">
+```rust
 fn read_as_little_endian(bytes: u8, values: &[u8]) -> u32 {
     let mut result: u32 = 0;
 
@@ -52,13 +52,13 @@ fn read_as_little_endian(bytes: u8, values: &[u8]) -> u32 {
 
     result
 }
-</pre>
+```
 
-### Read and collect the value
+### Read and collect the values
 
-<pre class="language-rust">
+```rust
 fn main() {
-    let args: Vec<String> = env::args().collect();
+    let args: Vec<String>; = env::args().collect();
 
     match args.len() {
         2 => println!("Read WAV file headers from: {}\n", &args[1]),
@@ -91,9 +91,13 @@ fn main() {
     // pretty print the struct
     println!("{:#?}", header);
 }
-</pre>
+```
 
 Based on this little experimentation with rust, I learned
 that rust reads binary data as unsigned integers `u8` that
 will act as basic blocks that need to be encoded based on the
 specification.
+
+```
+
+```
