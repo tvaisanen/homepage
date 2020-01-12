@@ -1,5 +1,6 @@
 ---
 path: "/blog/node-express-apollo-typescript-typeorm-part-1"
+slug: "node-express-apollo-typescript-typeorm-part-1"
 date: "2020-01-12"
 title: "How to get started with Apollo QraphQL and TypeORM"
 tags: ["typescript", "typeorm", "apollo", "graphql", "postgres"]

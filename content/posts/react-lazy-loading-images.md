@@ -1,5 +1,6 @@
 ---
 path: "/blog/reactjs-snippet-lazy-load-example"
+slug: "reactjs-snippet-lazy-load-example"
 date: "2019-07-30"
 title: "ReactJS snippet: Image lazy load example"
 ---
