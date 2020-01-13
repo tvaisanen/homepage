@@ -33,7 +33,7 @@ export const Template = ({ data, ...props }) => {
       </Section>
 
       <small>{frontmatter.date}</small>
-      <DiscussionEmbed {...disqusConfig} />
+      <DiscussionEmbed style={{ width: "100%" }} {...disqusConfig} />
     </Layout>
   )
 }
