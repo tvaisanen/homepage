@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components"
 import Prism from "prismjs"
+import { DiscussionEmbed } from "disqus-react"
 
 const Section = styled.section`
   max-width: 100%;
@@ -11,6 +12,11 @@ const Section = styled.section`
 export const Template = ({ data, ...props }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: frontmatter.slug, title: frontmatter.title },
+  }
 
   React.useEffect(() => {
     // call the highlightAll() function to style our code blocks
@@ -26,6 +32,7 @@ export const Template = ({ data, ...props }) => {
       </Section>
 
       <small>{frontmatter.date}</small>
+      <DiscussionEmbed {...disqusConfig} />
     </Layout>
   )
 }

@@ -1,5 +1,6 @@
 ---
 path: "/blog/read-wave-file-header-with-rust"
+slug: "read-wave-file-header-with-rust"
 date: "2019-12-28"
 title: "Read WAVE file header with rust"
 ---
