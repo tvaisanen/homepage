@@ -24,6 +24,7 @@ export const Template = ({ data, ...props }) => {
   })
   return (
     <Layout>
+      {process.env.GATSBY_DISQUS_NAME}
       <Section className="blog-post">
         <div
           className="blog-post-content"
@@ -32,7 +33,7 @@ export const Template = ({ data, ...props }) => {
       </Section>
 
       <small>{frontmatter.date}</small>
-      <DiscussionEmbed {...disqusConfig} />
+      <DiscussionEmbed style={{ width: "100%" }} {...disqusConfig} />
     </Layout>
   )
 }
