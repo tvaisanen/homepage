@@ -184,4 +184,4 @@ X-Powered-By: Express
 
 ---
 
-And that's it. Express application setup with listeing Apollo server, typescript, typeorm and postgres setup with just a few lines of code.
+And that's it. Express application setup with listening Apollo server, Typescript, TypeORM and Postgres setup with just a few lines of code.
