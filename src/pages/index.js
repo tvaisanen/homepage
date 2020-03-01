@@ -7,8 +7,14 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>t.vaisanen</h1>
-    <p>Hi, there.</p>
+    <section className="hero is-large is-dark is-bold">
+      <div className="hero-body">
+        <div className="container has-text-centered">
+          <h1 className="title">t.vaisanen</h1>
+          <h2 className="subtitle">personal web page</h2>
+        </div>
+      </div>
+    </section>
   </Layout>
 )
 

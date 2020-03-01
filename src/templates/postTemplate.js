@@ -25,17 +25,12 @@ export const Template = ({ data, ...props }) => {
   return (
     <Layout>
       <Section className="blog-post">
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <div className="container" dangerouslySetInnerHTML={{ __html: html }} />
+        <div style={{ height: "min-content", width: "100%" }}>
+          <DiscussionEmbed {...disqusConfig} />
+        </div>
+        <small>{frontmatter.date}</small>
       </Section>
-
-      <div style={{ height: "min-content", width: "100%" }}>
-        <DiscussionEmbed {...disqusConfig} />
-      </div>
-
-      <small>{frontmatter.date}</small>
     </Layout>
   )
 }

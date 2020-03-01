@@ -126,7 +126,7 @@ Express server has started on port 3000. Open http://localhost:3000/users to see
 
 ---
 
-### Confirm that TypeORM is running
+#### Confirm that TypeORM is running
 
 TypeORM's template creates an endpoint **localhost:3000/users** that we can use to test that the service is running correctly.
 
@@ -159,7 +159,7 @@ X-Powered-By: Express
 
 ---
 
-### Confirm that qraphql endpoint is listening
+#### Confirm that qraphql endpoint is listening
 
 ```log
 ➜  http POST :3000/graphql query={"query":"hello"}
@@ -180,8 +180,9 @@ X-Powered-By: Express
 
 ```
 
-### You can also navigate to **localhost:3000/graphql** with a web browser to explore the GraphQL API.
+You can also navigate to **localhost:3000/graphql** with a web browser to explore the GraphQL API.
 
 ---
 
 And that's it. Express application setup with listening Apollo server, Typescript, TypeORM and Postgres setup with just a few lines of code.
+Let's create and connect Apollo QraphQL resolvers to the TypeORM data models [here](/blog/node-express-apollo-typescript-typeorm-part-2)

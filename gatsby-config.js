@@ -107,5 +107,11 @@ module.exports = {
         escapeEntities: {},
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-bulma`],
+      },
+    },
   ],
 }
